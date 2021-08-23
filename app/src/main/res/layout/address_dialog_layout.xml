@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/headerview"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Enter Quantity"
+                    android:textColor="@color/black_text" />
+
+            </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emailLayout"
+                app:layout_constraintTop_toBottomOf="@id/headerview"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/EditAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="Quantity"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/emailLayout"
+            android:background="@drawable/border_button"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="CANCEL"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:id="@+id/cencel"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:background="@color/gray_text"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="APPLY"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/apply"
+                android:textSize="12dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".bottonshield.SortBottomShield">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/close"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:id="@+id/title_sort"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:text="Categories" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_close"
+        android:id="@+id/close"
+        app:layout_constraintTop_toTopOf="@id/title_sort"
+        app:layout_constraintBottom_toBottomOf="@id/title_sort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/title_sort"
+        app:layout_constraintTop_toTopOf="@id/title_sort"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:textSize="14dp"
+        android:id="@+id/clear"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/purple_500"
+        android:text="Clear" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:id="@+id/v1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_sort"
+        android:background="@color/gray_text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="All"
+        android:id="@+id/all"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/v1"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/all_check"
+        android:layout_marginRight="0dp"
+        android:checked="false"
+        app:layout_constraintTop_toTopOf="@id/all"
+        app:layout_constraintBottom_toBottomOf="@id/all"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+  <TextView
+        android:layout_width="wrap_content"
+        android:text="Merchant Payment"
+        android:id="@+id/merchant"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/all"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/merchant_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/merchant"
+        app:layout_constraintBottom_toBottomOf="@id/merchant"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Money Received"
+        android:id="@+id/received"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/merchant"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/money_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/received"
+        app:layout_constraintBottom_toBottomOf="@id/received"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Recharge &amp; Bill Payment"
+        android:id="@+id/recharge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/received"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/recharge_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/recharge"
+        app:layout_constraintBottom_toBottomOf="@id/recharge"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Money Debited"
+        android:id="@+id/debited"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/recharge"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/debited_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/debited"
+        app:layout_constraintBottom_toBottomOf="@id/debited"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cornerRadius="0dp"
+        android:id="@+id/apply"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="@color/white"
+        android:elevation="0dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/debited"
+        android:text="Apply">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="Apply"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

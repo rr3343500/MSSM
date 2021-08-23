@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have sent an OTP to"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/loginTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your Mobile"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/black_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/detailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pleace check your mobile number 8871121959"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle1"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/detailsTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="continue to reset yours password"
+        android:textColor="@color/gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintTop_toBottomOf="@+id/detailsTitle"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsTitle1"
+        app:layout_constraintVertical_bias="0.110000014">
+
+
+        <LinearLayout
+            android:id="@+id/otp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_back"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/otp2"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/login_edit_text_back"
+                android:fontFamily="@font/lato_semi_bold"
+                android:hint="0"
+                android:id="@+id/edit1"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="#b7b8b8" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/otp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_back"
+            app:layout_constraintBottom_toBottomOf="@+id/otp1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/otp1"
+            app:layout_constraintRight_toLeftOf="@+id/otp3"
+            app:layout_constraintTop_toTopOf="@+id/otp1">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/login_edit_text_back"
+                android:fontFamily="@font/lato_semi_bold"
+                android:hint="0"
+                android:id="@+id/edit2"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="#b7b8b8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_back"
+            app:layout_constraintBottom_toBottomOf="@+id/otp1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/otp2"
+            app:layout_constraintRight_toLeftOf="@+id/otp4"
+            app:layout_constraintTop_toTopOf="@+id/otp1">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/login_edit_text_back"
+                android:fontFamily="@font/lato_semi_bold"
+                android:hint="0"
+                android:inputType="number"
+                android:maxLength="1"
+                android:id="@+id/edit3"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="#b7b8b8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_back"
+            app:layout_constraintBottom_toBottomOf="@+id/otp1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/otp3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/otp1">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/login_edit_text_back"
+                android:fontFamily="@font/lato_semi_bold"
+                android:hint="0"
+                android:inputType="number"
+                android:maxLength="1"
+                android:id="@+id/edit4"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="#b7b8b8" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/nextBtn"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/boxcut"
+        android:gravity="center"
+        android:text="Varify"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpLayout" />
+
+
+
+    <LinearLayout
+        android:id="@+id/otpresendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/nextBtn">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Didn't Receive?"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/gray_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/SignupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/lato_black"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

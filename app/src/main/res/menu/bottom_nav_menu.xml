@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/cartFragment"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_user"
+        android:title="@string/title_account" />
+
+    <item
+        android:id="@+id/privacyFragment"
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy &amp; Others" />
+
+    <item
+        android:id="@+id/helpFragment"
+        android:icon="@drawable/ic_help"
+        android:title="Help Centre" />
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share"
+        android:title="Share App" />
+
+    <item
+        android:id="@+id/sellerHomeFragment"
+        android:icon="@drawable/ic_sell"
+        android:title="Sell On  MSSM" />
+
+</menu>

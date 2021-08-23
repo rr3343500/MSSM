@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="colorPrimary">#1E88E5</color>
+    <color name="purple_500">#07B3B2</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#07B3B2</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#fff</color>
+    <color name="colorAccent">#00574B</color>
+    <color name="milk_color">#B6C5E8</color>
+
+    <color name="ucrop_color_toolbar">#FF6200EE</color>
+    <color name="ucrop_color_statusbar">@color/teal_700</color>
+    <color name="ucrop_color_widget_active">@color/purple_500</color>
+
+    <color name="black_text">#4a4b4d</color>
+    <color name="gray_text">#a4a5a6</color>
+    <color name="login_edit_text_back">#f2f2f2</color>
+    <color name="welcome_red">#d44323</color>
+    <color name="fb_color">#367fc0</color>
+    <color name="light_sky">#E3F2FF</color>
+    <color name="view">#E6E6E6</color>
+    <color name="light_orange">#FF5722</color>
+    <color name="light_gray_background">#eae3e3</color>
+</resources>

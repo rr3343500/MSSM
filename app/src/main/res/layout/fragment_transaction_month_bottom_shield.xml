@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/close"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:id="@+id/title_sort"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:text="Choose Month" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_close"
+        android:id="@+id/close"
+        app:layout_constraintTop_toTopOf="@id/title_sort"
+        app:layout_constraintBottom_toBottomOf="@id/title_sort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/title_sort"
+        app:layout_constraintTop_toTopOf="@id/title_sort"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:textSize="14dp"
+        android:id="@+id/clear"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/purple_500"
+        android:text="Clear" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:id="@+id/v1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_sort"
+        android:background="@color/gray_text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="All"
+        android:id="@+id/all"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/v1"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/all_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/all"
+        app:layout_constraintBottom_toBottomOf="@id/all"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="This Month"
+        android:id="@+id/this_month"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/all"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/this_month_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/this_month"
+        app:layout_constraintBottom_toBottomOf="@id/this_month"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Last Month"
+        android:id="@+id/last_month"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/this_month"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/last_month_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/last_month"
+        app:layout_constraintBottom_toBottomOf="@id/last_month"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Last 3 Month"
+        android:id="@+id/last_3_month"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/last_month"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/last_3_month_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/last_3_month"
+        app:layout_constraintBottom_toBottomOf="@id/last_3_month"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Last 5 Month"
+        android:id="@+id/last_5_month"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/last_3_month"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/last_5_month_check"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@id/last_5_month"
+        app:layout_constraintBottom_toBottomOf="@id/last_5_month"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cornerRadius="0dp"
+        android:id="@+id/apply"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="@color/white"
+        android:elevation="0dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_5_month"
+        android:text="Apply">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="Apply"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

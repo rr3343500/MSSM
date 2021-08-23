@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    style="@style/Theme.AppCompat.DayNight.DialogWhenLarge"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Select State"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:id="@+id/title_state"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/line1"
+        app:layout_constraintTop_toBottomOf="@id/title_state"
+        android:background="@color/gray_text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/row_state_layout"
+        tools:itemCount="20"
+        android:id="@+id/recycle"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:layout_height="400dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

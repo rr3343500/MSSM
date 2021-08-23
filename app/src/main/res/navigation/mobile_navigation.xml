@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.root.mssm.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.root.mssm.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.root.mssm.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.root.mssm.ui.signup.SignupFragment"
+        android:label="SignupFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.root.mssm.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/OTPVarificationFragment"
+        android:name="com.root.mssm.ui.otpvarification.OTPVarificationFragment"
+        android:label="o_t_p_varification_fragment"
+        tools:layout="@layout/o_t_p_varification_fragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.root.mssm.ui.search.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.root.mssm.ui.category.CategoryFragment"
+        android:label="category_fragment"
+        tools:layout="@layout/category_fragment" />
+    <fragment
+        android:id="@+id/subCategoryFragment"
+        android:name="com.root.mssm.ui.subcategory.SubCategoryFragment"
+        android:label="sub_category_fragment"
+        tools:layout="@layout/sub_category_fragment" />
+    <fragment
+        android:id="@+id/childFragment"
+        android:name="com.root.mssm.ui.childcategory.ChildFragment"
+        android:label="ChildFragment" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.root.mssm.ui.productdetail.ProductDetailFragment"
+        android:label="product_detail_fragment"
+        tools:layout="@layout/product_detail_fragment" />
+    <fragment
+        android:id="@+id/specificationFragment"
+        android:name="com.root.mssm.ui.specification.productspecification.SpecificationFragment"
+        android:label="specification_fragment"
+        tools:layout="@layout/specification_fragment" />
+    <fragment
+        android:id="@+id/specificationDetailFragment"
+        android:name="com.root.mssm.ui.specification.speccificationdetail.SpecificationDetailFragment"
+        android:label="specification_detail_fragment"
+        tools:layout="@layout/specification_detail_fragment" />
+    <fragment
+        android:id="@+id/discriptionFragment"
+        android:name="com.root.mssm.ui.specification.discription.DiscriptionFragment"
+        android:label="discription_fragment"
+        tools:layout="@layout/discription_fragment" />
+    <fragment
+        android:id="@+id/moreInfoFragment"
+        android:name="com.root.mssm.ui.specification.moreinfo.MoreInfoFragment"
+        android:label="more_info_fragment"
+        tools:layout="@layout/more_info_fragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.root.mssm.ui.cart.CartFragment"
+        android:label="cart_fragment"
+        tools:layout="@layout/cart_fragment" />
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.root.mssm.ui.myorder.myorders.MyOrderFragment"
+        android:label="my_order_fragment"
+        tools:layout="@layout/my_order_fragment" />
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.root.mssm.ui.myorder.orderdetail.OrderDetailFragment"
+        android:label="order_detail_fragment"
+        tools:layout="@layout/order_detail_fragment" />
+    <fragment
+        android:id="@+id/myAddressFragment"
+        android:name="com.root.mssm.ui.myaddress.myaddresses.MyAddressFragment"
+        android:label="MyAddressFragment" />
+    <fragment
+        android:id="@+id/addNewAddressFragment"
+        android:name="com.root.mssm.ui.myaddress.addnewaddress.AddNewAddressFragment"
+        android:label="add_new_address_fragment"
+        tools:layout="@layout/add_new_address_fragment" />
+    <fragment
+        android:id="@+id/searchProductsFragment"
+        android:name="com.root.mssm.ui.search.searchproducts.SearchProductsFragment"
+        android:label="SearchProductsFragment" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.root.mssm.ui.wallet.WalletFragment"
+        android:label="wallet_fragment"
+        tools:layout="@layout/wallet_fragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.root.mssm.ui.editprofile.EditProfileFragment"
+        android:label="edit_profile_fragment"
+        tools:layout="@layout/edit_profile_fragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.root.mssm.ui.editprofile.changepassword.ChangePasswordFragment"
+        android:label="change_password_fragment"
+        tools:layout="@layout/change_password_fragment" />
+    <fragment
+        android:id="@+id/orderSummaryFragment"
+        android:name="com.root.mssm.ui.ordersummary.OrderSummaryFragment"
+        android:label="order_summary_fragment"
+        tools:layout="@layout/order_summary_fragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.root.mssm.ui.payment.PaymentFragment"
+        android:label="PaymentFragment" />
+    <fragment
+        android:id="@+id/selectAddressFragment"
+        android:name="com.root.mssm.ui.selectaddress.SelectAddressFragment"
+        android:label="SelectAddressFragment" />
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.root.mssm.ui.myaddress.editaddress.EditAddressFragment"
+        android:label="EditAddressFragment" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.root.mssm.ui.privacy.PrivacyFragment"
+        android:label="privacy_fragment"
+        tools:layout="@layout/privacy_fragment" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.root.mssm.ui.helpcenter.HelpFragment"
+        android:label="help_fragment"
+        tools:layout="@layout/help_fragment" />
+    <fragment
+        android:id="@+id/sellerHomeFragment"
+        android:name="com.root.mssm.ui.sellonmssm.home.SellerHomeFragment"
+        android:label="seller_home_fragment"
+        tools:layout="@layout/seller_home_fragment" />
+    <fragment
+        android:id="@+id/privacyDetailFragment"
+        android:name="com.root.mssm.ui.privacy.privacydetail.PrivacyDetailFragment"
+        android:label="PrivacyDetailFragment" />
+</navigation>

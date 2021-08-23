@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.myorder.myorders.MyOrderFragment">
+
+    <include android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/topPanel"
+        layout="@layout/home_actionbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/topPanel"
+        android:fillViewport="true"
+        android:clipToPadding="true"
+        android:paddingBottom="70dp"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Order ID - "
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:fontFamily="@font/lato_regular"
+                android:id="@+id/orderid_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Loading ..."
+                android:fontFamily="@font/lato_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:id="@+id/order_id"
+                app:layout_constraintLeft_toRightOf="@id/orderid_title"
+                android:layout_height="wrap_content"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_text"
+                app:layout_constraintTop_toBottomOf="@id/orderid_title"
+                android:id="@+id/line1"/>
+
+
+            <TextView
+                android:layout_width="200dp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                android:text="Loading ..."
+                android:id="@+id/name"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:layout_width="80dp"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/image"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="80dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="seller:"
+                android:id="@+id/seller_title"
+                android:fontFamily="@font/lato_regular"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/seller_title"
+                android:text="Loading"
+                android:fontFamily="@font/lato_regular"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/seller_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"
+                android:id="@+id/price"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Loading..."
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray_text"
+                app:layout_constraintTop_toBottomOf="@id/price"
+                android:id="@+id/line2"/>
+
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:stepSize="1"
+                android:scaleX="0.7"
+                android:scaleY="0.6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/rating_bar"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="write a Review"
+                app:layout_constraintTop_toTopOf="@id/rating_bar"
+                app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/purple_500"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Need help?"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:id="@+id/need_help"
+                android:paddingBottom="10dp"
+                android:background="@drawable/border_button"
+                app:layout_constraintTop_toBottomOf="@id/rating_bar"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:layout_constraintTop_toBottomOf="@id/need_help"
+                android:elevation="5dp"
+                android:id="@+id/invoice_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_invoice"
+                        android:id="@+id/invoice_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Invoice Download"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/invoice_icon"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:src="@drawable/ic_right_arrowblack"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/invoice_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:cardCornerRadius="0dp"
+                android:elevation="5dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="5dp"
+                android:id="@+id/shipping_layout"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Shipping Details"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/shipping_detail_title"
+                        android:fontFamily="@font/lato_regular"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray_text"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_detail_title"
+                        android:id="@+id/line5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Loading..."
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:id="@+id/shipping_name"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/line5"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_height="wrap_content"
+                        android:text="Loading ... "
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="13dp"
+                        android:id="@+id/shipping_address"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_name"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_height="wrap_content"
+                        android:text="Loading ... "
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="13dp"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_address"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/shipping_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:cardCornerRadius="0dp"
+                android:elevation="5dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="5dp"
+                android:id="@+id/price_layout"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Shipping Details"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/price_title"
+                        android:fontFamily="@font/lato_regular"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray_text"
+                        app:layout_constraintTop_toBottomOf="@id/price_title"
+                        android:id="@+id/line6"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line6"
+                        android:layout_marginTop="10dp"
+                        android:text="List price"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/list_price_title"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line6"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading..."
+                        app:layout_constraintTop_toTopOf="@id/list_price_title"
+                        app:layout_constraintBottom_toBottomOf="@id/list_price_title"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/list_price_title"
+                        android:layout_marginTop="10dp"
+                        android:text="Selling Price"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/selling_price_title"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line6"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading..."
+                        app:layout_constraintTop_toTopOf="@id/selling_price_title"
+                        app:layout_constraintBottom_toBottomOf="@id/selling_price_title"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/selling_price_title"
+                        android:layout_marginTop="10dp"
+                        android:text="Shipping fee"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/shipping_price_title"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line6"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading..."
+                        app:layout_constraintTop_toTopOf="@id/shipping_price_title"
+                        app:layout_constraintBottom_toBottomOf="@id/shipping_price_title"
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_price_title"
+                        android:layout_marginTop="10dp"
+                        android:text="Total Price"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/total_price_title"
+                        android:fontFamily="@font/lato_semi_bold"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line6"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading..."
+                        app:layout_constraintTop_toTopOf="@id/total_price_title"
+                        app:layout_constraintBottom_toBottomOf="@id/total_price_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/lato_semi_bold"
+                        android:layout_height="wrap_content"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray_text"
+                        app:layout_constraintTop_toBottomOf="@id/total_price_title"
+                        android:id="@+id/line7"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line7"
+                        android:layout_marginTop="10dp"
+                        android:text="Cash On Delivery: "
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/cash_on_delivery_title"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/line7"
+                        android:layout_marginTop="10dp"
+                        android:text="loading..."
+                        android:textColor="@color/cardview_dark_background"
+                        app:layout_constraintLeft_toRightOf="@id/cash_on_delivery_title"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_height="wrap_content"/>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

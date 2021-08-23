@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refresh"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/smithnestel"
+    android:background="@color/light_gray_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="120dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/category_item" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@id/category"
+            android:elevation="2dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="0dp"
+            android:id="@+id/sliderlayout"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/sliderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/title_feature"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="0dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp"
+            android:layout_below="@id/sliderlayout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Feature Product"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_feature_product"
+                android:orientation="vertical"
+                android:layout_below="@id/title_feature"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:layout_marginTop="50dp"
+                tools:itemCount="2"
+                android:foregroundGravity="center"
+                android:clipToPadding="false"
+                android:paddingBottom="5dp"
+                android:id="@+id/featureproduct"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/title_best"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp"
+            android:layout_below="@id/title_feature"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Best Product"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bestproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_best"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="2"
+            tools:listitem="@layout/row_best_product" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/title_topproduct"
+            android:layout_marginTop="0dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp"
+            android:layout_below="@id/bestproduct"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Top Product"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_right_arrowblack"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_top_products"
+            android:orientation="horizontal"
+            android:layout_below="@id/title_topproduct"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            android:background="@color/white"
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:paddingBottom="5dp"
+            android:id="@+id/topproducts"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@id/topproducts"
+            android:elevation="5dp"
+            app:cardElevation="2dp"
+            android:id="@+id/bottomsliderlayout"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/bottomsliderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/title_hot"
+            android:layout_marginTop="5dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp"
+            android:layout_below="@id/bottomsliderlayout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Hot Product"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_hot_products"
+            android:orientation="vertical"
+            android:layout_below="@id/title_hot"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="2"
+            android:background="@color/white"
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:paddingBottom="5dp"
+            android:id="@+id/hotproduct"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/title_latest"
+            android:layout_marginTop="5dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp"
+            android:layout_below="@id/hotproduct"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Latest Product"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_latest_product"
+            android:orientation="vertical"
+            android:layout_below="@id/title_latest"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:itemCount="6"
+            app:spanCount="2"
+            android:background="@color/white"
+
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:paddingBottom="5dp"
+            android:id="@+id/latestproducts"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_brand_layout"
+            android:orientation="horizontal"
+            android:layout_below="@id/latestproducts"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:paddingBottom="5dp"
+            android:id="@+id/brandproduct"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

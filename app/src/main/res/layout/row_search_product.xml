@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/border_gray_light"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:id="@+id/view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/image"
+        android:layout_margin="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="150dp"/>
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:text="sdsfsfdsfggfgdfdddfffdgfgfgdfgdfgdfg"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:id="@+id/name"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="25"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:id="@+id/price"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="25"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/gray_text"
+        android:maxLines="1"
+        android:id="@+id/actualprice"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="25 % off"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toRightOf="@id/actualprice"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/teal_200"
+        android:maxLines="1"
+        android:id="@+id/off"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:text="25"
+        android:drawablePadding="2dp"
+        android:drawableRight="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textSize="12dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:background="@color/colorAccent"
+        android:id="@+id/rating"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="(240)"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintLeft_toRightOf="@id/rating"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/gray_text"
+        android:maxLines="1"
+        android:id="@+id/count"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
